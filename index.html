@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ChiX — Privacy Policy</title>
+  <meta name="description" content="ChiX Privacy Policy — Secure chat app using Supabase & Firebase Cloud Messaging">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#05060a; --card:#0b0f1a; --muted:#9aa4bf; --accent1:#7cf6ff; --accent2:#9b6bff; --glass:rgba(255,255,255,0.04);
+    }
+    html,body{height:100%;margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial}
+    body{
+      background: radial-gradient(1200px 600px at 10% 10%, rgba(124,246,255,0.06), transparent),
+                  radial-gradient(800px 400px at 90% 90%, rgba(155,107,255,0.06), transparent),
+                  var(--bg);
+      color:#e6eef8; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+    }
+    /* animated neon grid */
+    .grid {
+      position:fixed; inset:0; z-index:0; opacity:0.12; background-image: linear-gradient(0deg, rgba(255,255,255,0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px); background-size: 40px 40px, 40px 40px; animation: drift 18s linear infinite; transform:translateZ(0);
+    }
+    @keyframes drift{0%{background-position:0 0,0 0}100%{background-position:800px 0,0 800px}}
+
+    .container{position:relative;z-index:1;max-width:900px;margin:48px auto;padding:36px;border-radius:16px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));box-shadow: 0 8px 30px rgba(2,6,23,0.7);backdrop-filter: blur(8px);border:1px solid rgba(255,255,255,0.03)}
+
+    header{display:flex;align-items:center;gap:16px;margin-bottom:20px}
+    .logo{
+      width:72px;height:72px;border-radius:16px;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:20px;color:#05060a;background:linear-gradient(135deg,var(--accent1),var(--accent2));box-shadow:0 6px 30px rgba(155,107,255,0.12), 0 2px 8px rgba(124,246,255,0.06);transform:translateZ(0)
+    }
+    h1{margin:0;font-size:24px}
+    .meta{color:var(--muted);font-size:13px}
+
+    .hero-line{margin-top:6px;color:var(--muted)}
+
+    main{display:grid;grid-template-columns:1fr;gap:18px}
+    .card{background:var(--card);padding:20px;border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
+
+    h2{margin:0 0 12px 0;font-size:18px}
+    p{line-height:1.6;color:#dce9ff}
+    ul{margin:8px 0 12px 20px}
+
+    .accent-underline{display:inline-block;padding-bottom:4px;background-image:linear-gradient(90deg, rgba(124,246,255,0.12), rgba(155,107,255,0.12));}
+
+    footer{display:flex;justify-content:space-between;align-items:center;margin-top:18px;color:var(--muted);font-size:13px}
+
+    /* neon contact button */
+    .contact{padding:10px 14px;border-radius:10px;background:linear-gradient(90deg,var(--accent1),var(--accent2));color:#05060a;font-weight:700;text-decoration:none;box-shadow:0 6px 30px rgba(155,107,255,0.12);}
+
+    /* responsive */
+    @media (max-width:640px){.container{margin:20px;padding:20px}.logo{width:56px;height:56px;font-size:18px}}
+
+    /* subtle floating blobs */
+    .blob{position:fixed;border-radius:50%;filter:blur(64px);opacity:0.12;pointer-events:none}
+    .b1{width:420px;height:420px;left:-80px;top:-80px;background:linear-gradient(45deg,var(--accent1),transparent)}
+    .b2{width:300px;height:300px;right:-100px;bottom:-80px;background:linear-gradient(45deg,var(--accent2),transparent)}
+
+    /* small animation on headers */
+    .glow{position:relative}
+    .glow::after{content:'';position:absolute;left:-6px;right:-6px;bottom:-6px;top:-6px;border-radius:10px;background:linear-gradient(90deg, rgba(124,246,255,0.06), rgba(155,107,255,0.06));filter:blur(12px);opacity:0;transition:opacity .35s}
+    .card:hover .glow::after{opacity:1}
+  </style>
+</head>
+<body>
+  <div class="grid" aria-hidden="true"></div>
+  <div class="blob b1" aria-hidden="true"></div>
+  <div class="blob b2" aria-hidden="true"></div>
+
+  <div class="container" role="main">
+    <header>
+      <div class="logo">ChiX</div>
+      <div>
+        <h1>ChiX — Privacy Policy</h1>
+        <div class="meta">Last updated: October 2025 • supabase + firebase notifications</div>
+        <div class="hero-line">Secure chat built with Supabase for data & Firebase Cloud Messaging for notifications</div>
+      </div>
+    </header>
+
+    <main>
+      <section class="card">
+        <h2 class="glow">Information We Collect</h2>
+        <p>ChiX collects the minimal information required to provide chat functionality. This includes:</p>
+        <ul>
+          <li><strong>Account Information:</strong> email, username, profile picture (if you provide one).</li>
+          <li><strong>Chat Data:</strong> messages, images, and files you send or receive — stored in Supabase.</li>
+          <li><strong>Device Token:</strong> Firebase Cloud Messaging (FCM) token used to deliver push notifications to your device.</li>
+        </ul>
+        <p>We do not collect phone contacts, precise geolocation, or other sensitive personal data without explicit consent.</p>
+      </section>
+
+      <section class="card">
+        <h2 class="glow">How We Use Your Data</h2>
+        <p>We use the data to:</p>
+        <ul>
+          <li>Allow you to sign in and manage your ChiX account.</li>
+          <li>Deliver real-time chat messages and push notifications.</li>
+          <li>Store media and message history securely in Supabase.</li>
+        </ul>
+        <p>ChiX does not sell, rent, or trade your personal information to third parties.</p>
+      </section>
+
+      <section class="card">
+        <h2 class="glow">Third-Party Services</h2>
+        <p>ChiX uses the following third-party services:</p>
+        <ul>
+          <li><strong>Supabase</strong> — for authentication, database, and file storage.</li>
+          <li><strong>Firebase Cloud Messaging (FCM)</strong> — for push notifications.</li>
+        </ul>
+        <p>These services have their own privacy policies and security measures. We encourage you to review them if you want details about how they process data.</p>
+      </section>
+
+      <section class="card">
+        <h2 class="glow">Data Security</h2>
+        <p>We implement standard security practices to protect your data. Your messages and media are stored on Supabase servers and access is restricted to authorized systems only.</p>
+      </section>
+
+      <section class="card">
+        <h2 class="glow">Children’s Privacy</h2>
+        <p>ChiX is not intended for children under 13 years of age. We do not knowingly collect information from children.</p>
+      </section>
+
+      <section class="card">
+        <h2 class="glow">Policy Updates</h2>
+        <p>We may update this Privacy Policy occasionally. If we make material changes, the "Last updated" date will be revised. Continued use of ChiX after changes constitutes acceptance of the updated policy.</p>
+      </section>
+
+      <section class="card">
+        <h2 class="glow">Contact</h2>
+        <p>If you have questions about privacy practices or this policy, contact us at:</p>
+        <p style="margin-top:8px"><a class="contact" href="mailto:farmaanuddinf51048@gmail.com">farmaanuddinf51048@gmail.com</a></p>
+      </section>
+
+    </main>
+
+    <footer>
+      <div class="meta">© 2025 ChiX • Built with Supabase & Firebase</div>
+      <div class="meta">Made by MyCompany</div>
+    </footer>
+  </div>
+
+  <script>
+    // small interactive sparkle when clicking header
+    document.querySelectorAll('.card h2').forEach(h => {
+      h.addEventListener('click', () => {
+        h.style.transform = 'translateY(-3px)';
+        h.style.transition = 'transform .18s ease';
+        setTimeout(()=>{h.style.transform='translateY(0)';},160);
+      });
+    });
+
+    // mobile-friendly reduce motion
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      document.querySelector('.grid').style.animation = 'none';
+    }
+  </script>
+</body>
+</html>
